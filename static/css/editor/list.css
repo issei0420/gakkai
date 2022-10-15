@@ -1,0 +1,25 @@
+.list {
+    margin: auto;
+    max-width: 1200px;
+}
+.list-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 180px 210px 292px;
+}
+.column {
+    text-align: center;
+    border-bottom: 1.5px solid;
+    font-weight: 550;
+    padding: 0.6rem;
+}
+.data {
+    padding: 1.2rem;
+    border-bottom: 1px solid;
+    border-color: rgb(166, 166, 166);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.data span {
+    text-align: center;
+}

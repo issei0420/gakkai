@@ -1,0 +1,102 @@
+/* 
+ .wrapper以外loginと共有 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(250, 248, 248);
+}
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.square {
+    width: 622px;
+    height: 440px;
+    background-color: #64DB8F;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.buns {
+    height: calc((100% - 100% / 1.4142) / 2);
+    display: flex;
+}
+.title {
+    font-size: larger;
+}
+.title span {
+    background-color: white;
+    padding: 3px 12px;
+    height: calc(100% / 2);
+    text-align: center;
+    color: #DB7307;
+    font-weight: bolder;
+    border-radius: 20px;
+    text-shadow:1px 1px 3px rgb(224, 224, 224);
+}
+.align-start {
+    align-items: center;
+}
+.align-center {
+    align-items: center;
+}
+.wrapper {
+    width: calc(100% / 1.4142);
+    height: calc(100% / 1.4142);
+    display: grid;
+    grid-template-columns: calc(100% - 100% / 1.4142) 1fr 1fr;
+    background-color: #F9F790;
+}
+.grid-track {
+    display: flex;
+    align-items: center;
+}
+.end {
+    justify-content: end;
+}
+.center {
+    justify-content: center;
+}
+.box1, .box8{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.box3, .box5, .box7 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.input {
+    width: calc(100% / 1.4142);
+    height: 26px;
+    font-size: 100%;
+}
+.user-type-button {
+    border: 1px solid;
+    padding: 2px 4px;
+    background-color: rgb(230, 230, 230);
+}
+.buttons {
+    width: calc(100% / 1.4142);
+    display: flex;
+    justify-content: space-between;
+}
+.menu-title {
+    padding: 0 0.25rem;
+    border-bottom: 1px solid;
+    border-color: rgb(155, 155, 155);
+}
+.submit-button {
+    padding: 2px 8px;
+    color: white;
+    background-color: #DB7307;
+    border-radius: 2.5px;
+}
+#login {
+    color: black;
+}

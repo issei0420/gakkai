@@ -1,0 +1,40 @@
+.status-block {
+    width: 690px;
+    margin: auto;
+}
+.status {
+    border: 1px solid;
+    display: grid;
+    grid-template-columns: 264px 426px;
+    column-gap: 1rem;
+    margin-bottom: 1rem;
+}
+.column {
+    background-color: #F9F790;
+    text-align: center;
+    padding: 2.5px 0;
+}
+.data {
+    padding: 2.5px 0;
+}
+.cancel-grid {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+}
+.cancel-area {
+    text-align: center;
+}
+.cancel-button {
+    border: 0.8px solid;
+    background-color: rgb(224, 224, 224);
+    padding: 0.25rem 0.5rem;
+}
+.status-date {
+    width: 265px;
+    text-align: center;
+    font-weight: 550;
+    color: white;
+    padding: 0.25rem 0;
+    background: radial-gradient( rgb(94, 206, 135), #64DB8F 99%);
+}

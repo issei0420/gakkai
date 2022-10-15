@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(240, 240, 240);
+}
+/* common */
+.mb {
+    margin-bottom: 1rem;
+}
+/* top */
+.top-area {
+    width: 930px;
+    height: 157px;
+    margin: 0 auto;
+    background-color: #F9F790;
+}
+.top-wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 7px 20px 55px 1fr;
+}
+.top-bar {
+    height: 100%;
+    background-color: #64DB8F;
+}
+.top-nav {
+    display: flex;
+    justify-content: right;
+    height: fit-content;
+}
+.top-nav-menu {
+    list-style: none;
+    display: flex;
+    font-size: 0.75rem;
+    height: 1.2rem;
+}
+.top-nav-menu li {
+    padding: 0 calc(1.75rem / 2);
+}
+.border {
+    border-right: 0.8px solid;
+}
+#slogan {
+    margin-left: 1.75rem;
+    display: flex;
+    align-items: center;
+}
+#slogan span {
+    border-bottom: 1px solid;
+}
+.top-main {
+    margin: 0 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+#service-title {
+    font-size: 1.6rem;
+}
+#english {
+    font-size: 1.1rem;
+    padding: 0.25rem 0.5rem;
+    color: white;
+    background-color: #DB7307;
+    align-self: flex-end;
+    margin-bottom: calc(1.75rem / 1.618);
+}
+/* main */
+.container {
+    height: 1000px;
+    background-color: rgb(100, 219, 143);
+}
+.main {
+    width: 930px;
+    height: 100%;
+    margin: auto;
+    background-color: white;
+}
+.conference-title-box { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    height: 60px; 
+    background: radial-gradient(rgb(255, 255, 255), #a5a5a5 99%);
+}
+.menu-area {
+    display: flex;
+    justify-content: right;
+}
+.menu {
+    list-style: none;
+    display: flex;
+}
+.menu li {
+    background-color: #F9F790;
+    border: 1px solid;
+    border-top: none;
+    margin-right: 1.75rem;
+    padding: 0.3rem 0.4rem;
+    border-radius: 0 0 10px 10px;
+}
+.menu-title-area {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+.menu-title {
+    padding-bottom:  0.25rem;
+    border-bottom: 2px solid rgb(183, 182, 182);
+    font-size: 1.2rem;
+}
+.seminar-date {
+    margin: 0 1.75rem 1.75rem;
+    padding: 0.25rem 1rem;
+    background-color: #64DB8F;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 600;
+    background: linear-gradient(to right, rgb(94, 206, 135), rgb(100, 219, 143, 0.2) );
+}
+.info-area {
+    width: fit-content;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.75rem;
+    column-gap: 1.75rem;
+}
+.seminar-title {
+    border: 1px solid;
+    width: 200px;
+    border-bottom: none;
+    padding: 2px 0;
+    text-align: center;
+}
+.info-box {
+    border: 1px solid;
+    display: flex;
+}
+.box-right {
+    width: 200px;
+    border-left: 1px solid;
+}
+.reserve-num-area {
+    height: 141px;
+    border-bottom: 1px solid;
+}
+.reserve-num-title {
+    height: 41px;
+    background-color: rgb(224, 224, 224);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reserve-num {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.num-top {
+    font-size: 2rem;
+}
+.right-bottom {
+    height: 141px;
+    display: flex;
+}
+.buttons {
+    margin: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.buttons span {
+    border: 0.8px solid;
+    text-align: center;
+    width: 141px;
+}
+.watch {
+    background-color: #F9F790;
+}
+.reserve {
+    background-color: #DB7307;
+    color: white;
+    border-color: black !important;
+}
+.cancel {
+    background-color: rgb(224, 224, 224);
+}
+.company {
+    text-align: center;
+    padding-top: 0.25rem;
+    text-decoration: underline;
+}

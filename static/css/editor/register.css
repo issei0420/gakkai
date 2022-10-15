@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.nav-bar {
+    display: flex;
+    background-color: rgb(110, 241, 157);
+    height: 50px;
+    margin-bottom: 2.5rem;
+}
+.title {
+    width: 59%;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-menu {
+    width: 41%;
+    background-color: #F9F790;
+}
+.nav-menu ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-link {
+    color: black;
+    text-decoration: none;
+}
+.container {
+    margin-bottom: 2.5rem;
+}
+.register-form {
+    width: 746px;
+    margin: 0 auto;
+}
+.title-area {
+    margin-bottom: 1.25rem;
+}
+.title-border {
+    border-bottom: 1px solid;
+    padding-bottom: 0.25rem;
+}
+.input-area {
+    width: 100%;
+    border: 1px solid;
+    margin-bottom: 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr 300px 1fr;
+    row-gap: 1.25rem;
+    padding: 1.25rem 0;
+}
+.input-area div {
+    display: flex;
+    align-items: center;
+}
+.box2, .box4, .box6 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.box1, .box3, .box5, .box7, .box10 {
+    justify-content: center;
+}
+input {
+    width: 418px;
+    height: 26px;
+    font-size: 100%;
+}
+.date-input {
+    height: 26px;
+    font-size: 100%;
+}
+.file-input {
+    display: none;
+}
+.file-button {
+    background-color: rgb(226, 226, 226);
+    padding: 2px 4px;
+    border: 0.8px solid gray;
+    border-radius: 4px;
+}
+.seminar-poster {
+    background-color: gray;
+    width: 200px;
+    height: calc(200px * 1.4142);
+}
+.lunch-image {
+    background-color: gray;
+    width: 282px;
+    height:282px
+}
+.button-area {
+    height: fit-content;
+    text-align: right;
+}
+#register-button {
+    font-size: 1.1rem;
+    background-color: #DB7307;
+    color: white;
+    padding: 5px 8px;
+}

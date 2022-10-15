@@ -1,0 +1,11 @@
+.wrapper-login {
+    width: calc(100% / 1.4142);
+    height: calc(100% / 1.4142);
+    display: grid;
+    grid-template-columns: calc(100% - 100% / 1.4142) 1fr;
+    background-color: #F9F790;
+}
+.box-l-1, .box-l-6{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
