@@ -2,16 +2,10 @@ package main
 
 import (
 	"fmt"
-	"html/template"
+	"gakkai/handler"
 	"net/http"
 	"os"
 )
-
-var temp = template.Must(template.ParseFiles("templates/user/index.html"))
-
-func hello(w http.ResponseWriter, r *http.Request) {
-	temp.ExecuteTemplate(w, "index.html", nil)
-}
 
 func main() {
 	fmt.Println("go started")
@@ -20,6 +14,6 @@ func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir(dir+"/static/"))))
 	http.Handle("/pdf/", http.StripPrefix("/pdf/", http.FileServer(http.Dir(dir+"/pdf/"))))
 
-	http.HandleFunc("/", hello)
+	http.HandleFunc("/index", handler.IndexHandler)
 	http.ListenAndServe(":8080", nil)
 }
