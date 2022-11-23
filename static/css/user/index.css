@@ -90,17 +90,20 @@ body {
     display: flex;
     justify-content: right;
 }
-.menu {
+#menu {
     list-style: none;
     display: flex;
 }
-.menu li {
+#menu li {
     background-color: #F9F790;
     border: 1px solid;
     border-top: none;
     margin-right: 1.75rem;
     padding: 0.3rem 0.4rem;
     border-radius: 0 0 10px 10px;
+}
+.change-color {
+    background-color: #f0ee8a;
 }
 .menu-title-area {
     text-align: center;

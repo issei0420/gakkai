@@ -3,6 +3,7 @@ package handler
 import (
 	"fmt"
 	"html/template"
+	"log"
 	"net/http"
 )
 
@@ -20,6 +21,7 @@ func editorParse() error {
 func ListHandler(w http.ResponseWriter, r *http.Request) {
 	err := editorTemps.ExecuteTemplate(w, "list.html", nil)
 	if err != nil {
+		log.Fatal(err)
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }
