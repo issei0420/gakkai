@@ -15,6 +15,7 @@ func main() {
 	http.Handle("/pdf/", http.StripPrefix("/pdf/", http.FileServer(http.Dir(dir+"/pdf/"))))
 	// user
 	http.HandleFunc("/index", handler.IndexHandler)
+	http.HandleFunc("/status", handler.StatusHandler)
 	// editor
 	http.HandleFunc("/list", handler.ListHandler)
 	http.HandleFunc("/register", handler.RegisterHandler)

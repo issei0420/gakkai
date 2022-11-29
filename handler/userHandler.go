@@ -3,6 +3,7 @@ package handler
 import (
 	"fmt"
 	"html/template"
+	"log"
 	"net/http"
 )
 
@@ -24,5 +25,17 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	userTemps.ExecuteTemplate(w, "index.html", nil)
+	if err = userTemps.ExecuteTemplate(w, "index.html", nil); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+}
+
+func StatusHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("############")
+	if err := userTemps.ExecuteTemplate(w, "status.html", nil); err != nil {
+		log.Fatal(err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
 }

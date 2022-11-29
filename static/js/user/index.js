@@ -7,7 +7,13 @@ for (let li of menuLIs) {
     
     li.addEventListener("mouseleave", () => {
         li.style.backgroundColor = "#F9F790";
-    }, false)
+    }, false);
+
+    li.addEventListener("click", switchPage, false);
+}
+
+function switchPage() {
+    window.location.href = 'http://localhost:8080/status'
 }
 
 
