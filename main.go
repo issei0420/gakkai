@@ -19,5 +19,9 @@ func main() {
 	// editor
 	http.HandleFunc("/list", handler.ListHandler)
 	http.HandleFunc("/register", handler.RegisterHandler)
+	// login
+	http.HandleFunc("/userLogin", handler.UserLoginHandler)
+	http.HandleFunc("/signUp", handler.SignUpHandler)
+
 	http.ListenAndServe(":8080", nil)
 }

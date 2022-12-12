@@ -1,5 +1,5 @@
 const menuLIs = document.getElementsByClassName("menu-li");
-const menuStatus = document.getElementById("menu-status");
+const menuIndex = document.getElementById("menu-index");
 
 for (let li of menuLIs) {
     li.addEventListener("mouseover", () => {
@@ -11,8 +11,8 @@ for (let li of menuLIs) {
     }, false);
 }
 
-menuStatus.addEventListener("click", switchPage, false);
+menuIndex.addEventListener("click", switchPage, false);
 
 function switchPage() {
-    window.location.href = 'http://localhost:8080/status'
+    window.location.href = 'http://localhost:8080/index'
 }
