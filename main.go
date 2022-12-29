@@ -22,6 +22,7 @@ func main() {
 	// login
 	http.HandleFunc("/userLogin", handler.UserLoginHandler)
 	http.HandleFunc("/signUp", handler.SignUpHandler)
+	http.HandleFunc("/editorLogin", handler.EditorLoginHandler)
 
 	http.ListenAndServe(":8080", nil)
 }

@@ -28,3 +28,15 @@ func SignUpHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 }
+
+func EditorLoginHandler(w http.ResponseWriter, r *http.Request) {
+	tf, err := template.ParseFiles("templates/editor/login.html")
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if err := tf.Execute(w, nil); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+}
