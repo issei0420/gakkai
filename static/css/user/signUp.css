@@ -5,6 +5,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body {
     background-color: rgb(250, 248, 248);
@@ -81,6 +82,10 @@ body {
     padding: 2px 4px;
     background-color: rgb(230, 230, 230);
 }
+.user-type-button-clicked {
+    border: 2px solid;
+}
+
 .buttons {
     width: calc(100% / 1.4142);
     display: flex;
