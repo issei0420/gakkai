@@ -1,20 +1,20 @@
-const userTypeButtons = document.getElementsByClassName("user-type-button");
+// const userTypeButtons = document.getElementsByClassName("user-type-button");
 const submitButton = document.getElementsByClassName("submit-button")[0];
 const mailInput = document.getElementById("mail-input");
 const passwordInput = document.getElementById("password-input");
 let userType = "";
 
-for (let button of userTypeButtons) {
-    button.addEventListener("mouseover",  () => {
-        button.style.backgroundColor = "#BFBFBF";
-    }, false)
+// for (let button of userTypeButtons) {
+//     button.addEventListener("mouseover",  () => {
+//         button.style.backgroundColor = "#BFBFBF";
+//     }, false)
 
-    button.addEventListener("mouseleave", () => {
-        button.style.backgroundColor = "#dcdcdc";
-    }, false);
+//     button.addEventListener("mouseleave", () => {
+//         button.style.backgroundColor = "#dcdcdc";
+//     }, false);
 
-    button.addEventListener("click", changeStatus, false);
-}
+//     button.addEventListener("click", changeStatus, false);
+// }
 
 submitButton.addEventListener("mouseover", () => {
     submitButton.style.backgroundColor = "#cf6e07";
@@ -27,14 +27,14 @@ submitButton.addEventListener("mouseleave", () => {
 
 submitButton.addEventListener("click", submit, false)
 
-function changeStatus() {
-    // 初期化
-    for (let button of userTypeButtons) {
-        button.classList.remove("user-type-button-clicked");
-    }
-    this.classList.add("user-type-button-clicked");
-    userType = this.innerHTML;
-} 
+// function changeStatus() {
+//     // 初期化
+//     for (let button of userTypeButtons) {
+//         button.classList.remove("user-type-button-clicked");
+//     }
+//     this.classList.add("user-type-button-clicked");
+//     userType = this.innerHTML;
+// } 
 
 function submit() {
     const data = {

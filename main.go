@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"gakkai/db"
 	"gakkai/handler"
 	"net/http"
 	"os"
@@ -9,7 +10,7 @@ import (
 
 func main() {
 	fmt.Println("go started")
-
+	db.ConnectDb()
 	dir, _ := os.Getwd()
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir(dir+"/static/"))))
 	http.Handle("/pdf/", http.StripPrefix("/pdf/", http.FileServer(http.Dir(dir+"/pdf/"))))
