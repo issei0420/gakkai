@@ -2,6 +2,8 @@ package handler
 
 import (
 	"encoding/json"
+	_ "fmt"
+	"gakkai/db"
 	"html/template"
 	"net/http"
 )
@@ -21,7 +23,6 @@ func UserLoginHandler(w http.ResponseWriter, r *http.Request) {
 type Data struct {
 	Mail     string
 	Password string
-	UserType string
 }
 
 func SignUpHandler(w http.ResponseWriter, r *http.Request) {
@@ -29,12 +30,28 @@ func SignUpHandler(w http.ResponseWriter, r *http.Request) {
 		var d Data
 		json.NewDecoder(r.Body).Decode(&d)
 
-		type response struct {
-			Invalid int `json:"invalid"`
-			// ResMap  map[string]int `json:"resmap"`
+		isUnique, err := db.IsUniqueParticipant(d.Mail)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
 		}
 
-		res := response{Invalid: 0}
+		type response struct {
+			Valid int `json:"valid"`
+		}
+		var res response
+
+		if isUnique {
+			err = db.InsertParticipant(d.Mail, d.Password)
+			if err != nil {
+				http.Error(w, err.Error(), http.StatusInternalServerError)
+				return
+			}
+			res = response{Valid: 1}
+		} else {
+			res = response{Valid: 0}
+		}
+
 		b, err := json.MarshalIndent(res, "", "\t")
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)

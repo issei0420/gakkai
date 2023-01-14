@@ -57,10 +57,9 @@ async function send(data){
     });
     const resObj = await res.json();
 
-    if (resObj["invalid"]) {
-        invalidMessage(resObj["resmap"]);
+    if (resObj["valid"] == 1) {
+        window.alert("登録が完了しました");
     } else {
-        window.alert("登録が完了しました")
+        window.alert("すでに登録済みのメールアドレスです")
     }
 }
-
