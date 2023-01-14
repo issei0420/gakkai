@@ -2,9 +2,12 @@ package handler
 
 import (
 	"encoding/json"
+	"fmt"
 	_ "fmt"
 	"gakkai/db"
+	"gakkai/lib"
 	"html/template"
+	"log"
 	"net/http"
 )
 
@@ -42,9 +45,12 @@ func SignUpHandler(w http.ResponseWriter, r *http.Request) {
 		var res response
 
 		if isUnique {
-			err = db.InsertParticipant(d.Mail, d.Password)
+			pHash := lib.MakeHash(d.Password)
+			err = db.InsertParticipant(d.Mail, pHash)
 			if err != nil {
+				fmt.Println(pHash)
 				http.Error(w, err.Error(), http.StatusInternalServerError)
+				log.Fatal(err)
 				return
 			}
 			res = response{Valid: 1}

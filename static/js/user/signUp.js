@@ -37,16 +37,33 @@ submitButton.addEventListener("click", submit, false)
 // } 
 
 function submit() {
+
     const data = {
         "mail": mailInput.value,
         "password": passwordInput.value,
-        "userType": userType
+    }
+
+    message = EmptyValidation(data)
+    if (message.length) {
+        string = message.join("\n");
+        window.alert(string);
+        return
     }
 
     send(data)
 }
 
-async function send(data){
+function EmptyValidation(data) {
+    let message = []
+    for (elem in data) {
+        if (data[elem] == "") {
+            message.push(elem + "が空白です");
+        }
+    }
+    return message
+}
+
+async function send(data) {
     url = 'http://localhost:8080/signUp'
     const res = await fetch(url, {
         method: 'POST',
@@ -63,3 +80,4 @@ async function send(data){
         window.alert("すでに登録済みのメールアドレスです")
     }
 }
+
